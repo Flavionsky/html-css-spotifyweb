@@ -2,11 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
   </head>
   <body>
+    <!-- Barra Upgrade fissata in alto della pagina -->
     <header>
       <div class="upgrade container-flex">
         <div class="upgrade-button">
@@ -14,16 +16,85 @@
         </div>
       </div>
     </header>
-    <nav>
-      <div class="nav-left">
-
+    <!-- Barra principale visualizzata a sinistra della pagina -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="img/logo.svg" alt="Spotify Logo">
       </div>
-    </nav>
-    <nav>
-      <div class="nav-bottom">
+      <section class="top-menu">
+        <div class="home-button">
+          <a class="container-flex" href="#">
+            <img src="img/home.svg" alt="Home button">
+            <p>Home</p>
+          </a>
+        </div>
+        <div class="search-bar">
+          <a class="container-flex" href="#">
+            <img src="img/search.svg" alt="Search">
+            <p>Cerca</p>
+          </a>
 
-      </div>
-    </nav>
+        </div>
+        <div class="library">
+          <a class="container-flex" href="#">
+            <img src="img/libreria.svg" alt="Library">
+            <p>La tua Libreria</p>
+          </a>
+        </div>
+      </section>
+      <section class="playlist-menu">
+        <h5>PLAYLIST</h5>
+        <div class="create-playlist">
+          <a class="container-flex" href="#"><div class="plus-container">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+          <p>Crea Playlist</p>
+          </a>
+        </div>
+        <div class="playlist">
+          <a href="#">Nome Playlist</a>
+        </div>
+        <div class="playlist">
+          <a href="#">Nome Playlist</a>
+        </div>
+        <div class="playlist">
+          <a href="#">Nome Playlist</a>
+        </div>
+        <div class="playlist">
+          <a href="#">Nome Playlist</a>
+        </div>
+        <div class="playlist">
+          <a href="#">Nome Playlist</a>
+        </div>
+        <div class="playlist">
+          <a href="#">Nome Playlist</a>
+        </div>
+        <div class="playlist">
+          <a href="#">Nome Playlist</a>
+        </div>
+      </section>
+      <section class="sidebar-bottom">
+        <div class="get-app">
+          <a class="container-flex" href="#">
+            <img src="img/download.svg" alt="download">
+            <p>Installa App</p>
+          </a>
+        </div>
+        <div class="sidebar-bottom-separator">
+        </div>
+        <div class="profile">
+          <a class="container-flex" href="#">
+            <img src="img/profile.svg" alt="Profile">
+            <p>John Doe</p>
+          </a>
+        </div>
+      </section>
+
+    </div>
+    <!-- Barra dei brani visualizzata in basso della pagina -->
+    <div class="nav-bottom">
+
+    </div>
     <main>
       <div class="hero">
 
