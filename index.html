@@ -2,8 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify</title>
   </head>
@@ -18,69 +18,72 @@
     </header>
     <!-- Barra principale visualizzata a sinistra della pagina -->
     <div class="sidebar">
-      <div class="logo">
-        <img src="img/logo.svg" alt="Spotify Logo">
-      </div>
-      <section class="top-menu">
-        <div class="home-button">
-          <a class="container-flex" href="#">
-            <img src="img/home.svg" alt="Home button">
-            <p>Home</p>
-          </a>
+      <div class="sidebar-top-center">
+        <div class="logo">
+          <img src="img/logo.svg" alt="Spotify Logo">
         </div>
-        <div class="search-bar">
-          <a class="container-flex" href="#">
-            <img src="img/search.svg" alt="Search">
-            <p>Cerca</p>
-          </a>
-
-        </div>
-        <div class="library">
-          <a class="container-flex" href="#">
-            <img src="img/libreria.svg" alt="Library">
-            <p>La tua Libreria</p>
-          </a>
-        </div>
-      </section>
-      <section class="playlist-menu">
-        <h5>PLAYLIST</h5>
-        <div class="create-playlist">
-          <a class="container-flex" href="#"><div class="plus-container">
-            <i class="fa fa-plus" aria-hidden="true"></i>
+        <section class="top-menu">
+          <div class="home-button">
+            <a class="container-flex" href="#">
+              <img src="img/home.svg" alt="Home button">
+              <p>Home</p>
+            </a>
           </div>
-          <p>Crea Playlist</p>
+          <div class="search-bar">
+            <a class="container-flex" href="#">
+              <img src="img/search.svg" alt="Search">
+              <p>Cerca</p>
+            </a>
+
+          </div>
+          <div class="library">
+            <a class="container-flex" href="#">
+              <img src="img/libreria.svg" alt="Library">
+              <p>La tua Libreria</p>
+            </a>
+          </div>
+        </section>
+        <div class="create-playlist">
+          <h5>PLAYLIST</h5>
+          <a class="container-flex" href="#">
+            <div class="plus-container">
+              <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+             <p>Crea Playlist</p>
           </a>
         </div>
-        <div class="playlist">
-          <a href="#">Nome Playlist</a>
-        </div>
-        <div class="playlist">
-          <a href="#">Nome Playlist</a>
-        </div>
-        <div class="playlist">
-          <a href="#">Nome Playlist</a>
-        </div>
-        <div class="playlist">
-          <a href="#">Nome Playlist</a>
-        </div>
-        <div class="playlist">
-          <a href="#">Nome Playlist</a>
-        </div>
-        <div class="playlist">
-          <a href="#">Nome Playlist</a>
-        </div>
-        <div class="playlist">
-          <a href="#">Nome Playlist</a>
-        </div>
-      </section>
-      <section class="sidebar-bottom">
+        <ul class="playlist-container">
+          <li class="playlist">
+            <a href="#">Nome Playlist</a>
+          </li>
+          <li class="playlist">
+            <a href="#">Nome Playlist</a>
+          </li>
+          <li class="playlist">
+            <a href="#">Nome Playlist</a>
+          </li>
+          <li class="playlist">
+            <a href="#">Nome Playlist</a>
+          </li>
+          <li class="playlist">
+            <a href="#">Nome Playlist</a>
+          </li>
+          <li class="playlist">
+            <a href="#">Nome Playlist</a>
+          </li>
+          <li class="playlist">
+            <a href="#">Nome Playlist</a>
+          </li>
+        </ul>
+      </div>
+      <section class="sidebar-footer">
         <div class="get-app">
           <a class="container-flex" href="#">
             <img src="img/download.svg" alt="download">
             <p>Installa App</p>
           </a>
         </div>
-        <div class="sidebar-bottom-separator">
+        <div class="sidebar-footer-separator">
         </div>
         <div class="profile">
           <a class="container-flex" href="#">
@@ -89,15 +92,143 @@
           </a>
         </div>
       </section>
-
     </div>
     <!-- Barra dei brani visualizzata in basso della pagina -->
-    <div class="nav-bottom">
-
+    <div class="nav-bottom container-flex">
+      <div class="song container-flex">
+        <div class="song-description container-flex">
+          <img src="img/sinister.jpeg" alt="Sinister Image">
+          <div class="song-text">
+            <h5>Sinister</h5>
+            <p>Brano Nome</p>
+          </div>
+        </div>
+        <div class="heart-folder container-flex">
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+          <i class="fa fa-folder-o" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="music-player container-flex">
+        <div class="bar-player container-flex">
+          <div class="button-container container-flex">
+            <i class="fa fa-random" aria-hidden="true"></i>
+            <i class="fa fa-step-backward" aria-hidden="true"></i>
+            <i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-step-forward" aria-hidden="true"></i>
+            <i class="fa fa-repeat" aria-hidden="true"></i>
+          </div>
+          <div class="bar-player-bottom container-flex">
+            <p>
+              0:25
+            </p>
+            <div class="bar-row">
+              <div class="bar-listening">
+                <div class="point">
+                </div>
+              </div>
+            </div>
+            <p>
+             4:35
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right-music-player container-flex">
+        <i class="fa fa-list" aria-hidden="true"></i>
+        <i class="fa fa-television" aria-hidden="true"></i>
+        <i class="fa fa-volume-up" aria-hidden="true"></i>
+        <div class="bar-player-right container-flex">
+          <div class="bar-row">
+            <div class="bar-listening">
+              <div class="point">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <main>
       <div class="hero">
+        <div class="hero-navbar container-flex">
+          <ul class="container-flex">
+            <li>
+              <a href="#" class="li-button">
+                IN EVIDENZA
+                <div class="li-bottom-green">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="li-button">
+                PODCAST
+                <div class="li-bottom-green">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="li-button">
+                CLASSIFICHE
+                <div class="li-bottom-green">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="li-button">
+                GENERI E MOOD
+                <div class="li-bottom-green">
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="li-button">
+                NUOVE USCITE
+                <div class="li-bottom-green">
+                </div>
+              </a>
+            </li>
 
+            <li>
+              <a href="#" class="li-button">
+                SCOPRI
+                <div class="li-bottom-green">
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <h2>Recently Played</h2>
+        <div class="recently-played container-flex">
+          <div class="recently-song">
+            <img src="img/metal_lifting.jpg" alt="Metal">
+            <h3>Heavy Metal</h3>
+            <p>Subtitle</p>
+          </div>
+          <div class="recently-song">
+            <img src="img/stranger.jpeg" alt="Stranger Things">
+            <h3>Stranger Things,Vol. 1(a Netflix Original Series Soundtrack)</h3>
+            <p>Kyle Dixon & Michael Stein</p>
+          </div>
+          <div class="recently-song">
+            <img src="img/aquietplace.jpeg" alt="Quiet Place">
+            <h3>A quiet place</h3>
+            <p>Subtitle</p>
+          </div>
+          <div class="recently-song">
+            <img src="img/split.jpeg" alt="Split">
+            <h3>Split</h3>
+            <p>Subtitle</p>
+          </div>
+          <div class="recently-song">
+            <img src="img/cure.jpeg" alt="A Cure for Wellness">
+            <h3>A cure for wellness</h3>
+            <p>Subtitle</p>
+          </div>
+          <div class="recently-song">
+            <img src="img/sinister.jpeg" alt="Sinister">
+            <h3>Sinister</h3>
+            <p>Subtitle</p>
+          </div>
+        </div>
       </div>
     </main>
 
