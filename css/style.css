@@ -188,8 +188,10 @@ header > .upgrade{
   justify-content: space-between;
 }
 .song{
+  flex-wrap: nowrap;
   align-items: center;
   padding-left: 10px;
+  flex-shrink: 1;
 }
 .song-description > img{
   width: 50px;
@@ -197,7 +199,7 @@ header > .upgrade{
 .song > .song-description{
   flex-direction: row;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 40px;
 }
 .song-text{
   padding-left: 10px;
@@ -214,19 +216,23 @@ header > .upgrade{
   padding-right: 15px;
 }
 .music-player{
+  flex-wrap: nowrap;
   width: 40%;
+  flex-shrink: 1;
 }
 .bar-player{
   width: 100%;
   flex-direction: column;
   align-items: center;
-    flex-shrink: 1;
 }
 .bar-player > .button-container {
  align-items: center;
  padding-bottom: 10px;
 }
-.button-container i:not([class="fa-repeat"]){
+.button-container > .fa-random,
+.button-container > .fa-step-backward,
+.button-container > .fa-play-circle-o,
+.button-container > .fa-step-forward{
   padding-right: 30px;
 }
 .bar-player p{
@@ -236,7 +242,7 @@ header > .upgrade{
   align-items: center;
 }
 .bar-player-bottom{
-  width: 90%;
+  width: 100%;
 }
 .bar-player-bottom > .bar-row{
   margin-left: 20px;
@@ -248,7 +254,7 @@ header > .upgrade{
 }
 .bar-player-bottom > .bar-row > .bar-listening{
   position: relative;
-  width: 80px;
+  width: 40%;
   height: 4px;
   background-color: white;
   border-radius: 10px;
@@ -272,21 +278,25 @@ header > .upgrade{
   display: inherit;
 }
 .right-music-player{
-margin-right: 20px;
+  flex-wrap: nowrap;
+  width: 20%;
+  flex-shrink: 1;
 }
-
+.bar-player-right{
+  width: 60%;
+}
 .bar-player-right > .bar-row{
-  width: 140px;
+  width: 90%;
   height: 4px;
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 10px;
 }
-.right-music-player i:not([class="fa-volume-up"]){
+.right-music-player i{
   padding-right: 15px;
 }
 .bar-player-right > .bar-row > .bar-listening{
   position: relative;
-  width: 40px;
+  width: 30%;
   height: 4px;
   background-color: white;
   opacity: 1;
@@ -466,10 +476,20 @@ padding-bottom: 20px;
   }
 }
 /* visualizzazione small */
-@media screen and (min-width:451px) and (max-width: 768px){
+@media screen and (min-width:501px) and (max-width: 768px){
   .sidebar{
     height: calc(100% - 80px);
     width: 250px;
+  }
+  .song > .heart-folder{
+    flex-direction: column;
+    font-size: 12px;
+  }
+  .song > .heart-folder i:first-child{
+    padding-bottom: 5px;
+  }
+  .song > .song-description{
+    padding-right: 15px;
   }
   .hero > .hero-navbar > ul > li:not(:last-child){
     padding-right: 30px;
@@ -478,7 +498,7 @@ padding-bottom: 20px;
     flex-wrap: wrap;
   }
   .recently-song, .for-you-song, .popular-song{
-    width: 200px;
+    width: 180px;
   }
   .display-hidden-sm{
     display: none;
@@ -492,7 +512,7 @@ padding-bottom: 20px;
   }
 }
 /* visualizzazione extra-smaill */
-@media screen and (max-width:450px) {
+@media screen and (max-width:500px) {
   .hero > .hero-navbar > ul > li:not(:last-child){
     padding-right: 15px;
   }
@@ -516,7 +536,7 @@ padding-bottom: 20px;
     font-size: 12px;
   }
   .recently-song, .for-you-song, .popular-song{
-    width: 150px;
+    width: 160px;
   }
   .display-hidden-xs{
     display: none;
@@ -531,5 +551,49 @@ padding-bottom: 20px;
   }
   header > .upgrade{
     width: calc(100% - 50px);
+  }
+  .song {
+    margin-right: 0;
+  }
+  .song > .heart-folder{
+    flex-direction: column;
+    font-size: 12px;
+  }
+  .song > .heart-folder i:first-child{
+    padding-bottom: 5px;
+  }
+  .song > .song-description{
+    padding-right: 10px;
+    font-size: 14px;
+  }
+  .song > .song-description img{
+    width: 30px;
+  }
+  .song-description > .song-text p{
+    font-size: 12px;
+  }
+  .button-container > .fa-random,
+  .button-container > .fa-step-backward,
+  .button-container > .fa-step-forward{
+    padding-right: 20px;
+    font-size: 14px;
+  }
+  .button-container > .fa-play-circle-o{
+    padding-right: 20px;
+    font-size: 26px;
+  }
+  .button-container  > .fa-repeat{
+    font-size: 15px;
+  }
+  .bar-player-bottom p{
+    font-size: 9px;
+  }
+  .bar-player-bottom > .bar-row{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .right-music-player i{
+    padding-right: 5px;
+    font-size: 12px;
   }
 }
