@@ -210,10 +210,13 @@ header > .upgrade{
 }
 .heart-folder{
   align-items: flex-end;
-  opacity: 0.5;
 }
 .heart-folder i{
   padding-right: 15px;
+  opacity: 0.5;
+}
+.heart-folder i:hover{
+  opacity: 1;
 }
 .music-player{
   flex-wrap: nowrap;
@@ -234,6 +237,9 @@ header > .upgrade{
 .button-container > .fa-play-circle-o,
 .button-container > .fa-step-forward{
   padding-right: 30px;
+}
+.button-container > .fa-play-circle-o:active{
+  font-size: 40px;
 }
 .bar-player p{
   font-size: 10px;
@@ -350,14 +356,24 @@ padding-bottom: 20px;
 .li-bottom-green{
     display: none;
     position: absolute;
-    bottom: -10px;
+    bottom: 0;
     right: 30%;
     background: #ADFF2F;
-    width: 30px;
+    width: 0;
     height: 2px;
+    animation: scale 0.5s;
+}
+@keyframes scale {
+  0%{
+    width: 15px;
+  }
+  100%{
+    width: 30px;
+  }
 }
 .hero > .hero-navbar > ul > li > .li-button:hover .li-bottom-green{
   display: inherit;
+  width: 30px;
 }
 .hero > h2{
   padding-left: 20px;
